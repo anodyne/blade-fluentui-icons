@@ -1,12 +1,16 @@
 {
-    "name": "blade-organization/blade-heroicons",
+    "name": "anodyne/blade-fluentui-icons",
     "description": "A package to easily make use of Heroicons in your Laravel Blade views.",
-    "keywords": ["Blade", "Heroicons", "Laravel"],
-    "homepage": "https://github.com/blade-organization/blade-heroicons",
+    "keywords": [
+        "Blade",
+        "Fluent UI System",
+        "Laravel"
+    ],
+    "homepage": "https://github.com/anodyne/blade-fluentui-icons",
     "license": "MIT",
     "authors": [
         {
-            "name": "Blade Developer"
+            "name": "Anodyne Productions"
         }
     ],
     "require": {
@@ -15,12 +19,26 @@
         "illuminate/support": "^9.0|^10.0"
     },
     "require-dev": {
+        "microsoft/fluentui-system-icons": "1.1.201",
         "orchestra/testbench": "^7.0|^8.0",
         "phpunit/phpunit": "^9.0"
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "microsoft/fluentui-system-icons",
+                "version": "1.1.201",
+                "dist": {
+                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.201.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "BladeUI\\Heroicons\\": "src"
+            "Anodyne\\FluentUiIcons\\": "src"
         }
     },
     "autoload-dev": {
@@ -28,10 +46,16 @@
             "Tests\\": "tests"
         }
     },
+    "scripts": {
+        "update-icons": [
+            "./bin/compile.sh ./vendor/microsoft/fluentui-system-icons/assets"
+        ],
+        "test": "vendor/bin/phpunit --colors=always"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "BladeUI\\Heroicons\\BladeHeroiconsServiceProvider"
+                "Anodyne\\FluentUiIcons\\BladeFluentUiIconsServiceProvider"
             ]
         }
     },
