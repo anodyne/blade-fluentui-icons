@@ -11,7 +11,7 @@ echo "Compiling icons..."
 for file in $DIST/*/SVG/* ;
 do
     file="${file%/}";
-    prefix="/Users/dvs/Code/blade-fluentui-icons/vendor/microsoft/fluentui-system-icons/assets/"
+    prefix="/Users/dvs/Code/personal/blade-fluentui-icons/vendor/microsoft/fluentui-system-icons/assets/"
 
     [[ "$file" =~ ^($prefix)(.*)(ic_fluent_)(.+)(_20_regular.svg)$ ]] && sed -e 's/ width="20" height="20"//g;s/#212121/currentColor/g' "$file" > "$RESOURCES/o-$(echo ${BASH_REMATCH[4]//_/-}.svg)"
 
