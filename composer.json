@@ -19,7 +19,7 @@
         "illuminate/support": "^9.0|^10.0"
     },
     "require-dev": {
-        "microsoft/fluentui-system-icons": "1.1.209",
+        "microsoft/fluentui-system-icons": "1.1.210",
         "orchestra/testbench": "^7.0|^8.0",
         "phpunit/phpunit": "^9.0"
     },
@@ -28,9 +28,9 @@
             "type": "package",
             "package": {
                 "name": "microsoft/fluentui-system-icons",
-                "version": "1.1.209",
+                "version": "1.1.210",
                 "dist": {
-                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.209.zip",
+                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.210.zip",
                     "type": "zip"
                 }
             }
