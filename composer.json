@@ -14,12 +14,12 @@
         }
     ],
     "require": {
-        "php": "~8.1.0|~8.2.0",
+        "php": ">=8.1",
         "blade-ui-kit/blade-icons": "^1.4",
         "illuminate/support": "^9.0|^10.0"
     },
     "require-dev": {
-        "microsoft/fluentui-system-icons": "1.1.223",
+        "microsoft/fluentui-system-icons": "1.1.224",
         "orchestra/testbench": "^7.0|^8.0",
         "phpunit/phpunit": "^9.0"
     },
@@ -28,9 +28,9 @@
             "type": "package",
             "package": {
                 "name": "microsoft/fluentui-system-icons",
-                "version": "1.1.223",
+                "version": "1.1.224",
                 "dist": {
-                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.223.zip",
+                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.224.zip",
                     "type": "zip"
                 }
             }
