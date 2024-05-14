@@ -22,7 +22,7 @@
         "laravel/pint": "^1.15",
         "microsoft/fluentui-system-icons": "1.1.239",
         "orchestra/testbench": "^7.0|^8.0|^9.0",
-        "phpunit/phpunit": "^9.5.10"
+        "phpunit/phpunit": "^9.5|^10.0|^11.0"
     },
     "repositories": [
         {
