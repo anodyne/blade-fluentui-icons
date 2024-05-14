@@ -19,7 +19,7 @@ final class BladeFluentUiIconsServiceProvider extends ServiceProvider
 
             $factory->add('fluent-ui', array_merge([
                 'path' => __DIR__.'/../resources/svg',
-                'prefix' => 'fluent'
+                'prefix' => 'fluent',
             ], $config));
         });
     }
