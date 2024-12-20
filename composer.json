@@ -20,7 +20,7 @@
     },
     "require-dev": {
         "laravel/pint": "^1.15",
-        "microsoft/fluentui-system-icons": "1.1.269",
+        "microsoft/fluentui-system-icons": "1.1.271",
         "orchestra/testbench": "^7.0|^8.0|^9.0",
         "phpunit/phpunit": "^9.5|^10.0|^11.0"
     },
@@ -29,9 +29,9 @@
             "type": "package",
             "package": {
                 "name": "microsoft/fluentui-system-icons",
-                "version": "1.1.269",
+                "version": "1.1.271",
                 "dist": {
-                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.269.zip",
+                    "url": "https://github.com/microsoft/fluentui-system-icons/archive/refs/tags/1.1.271.zip",
                     "type": "zip"
                 }
             }
