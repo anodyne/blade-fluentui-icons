@@ -1,14 +1,8 @@
 # Blade FluentUI Icons
 
-<a href="https://github.com/anodyne/blade-fluentui-icons/actions?query=workflow%3ATests">
-    <img src="https://github.com/blade-ui-kit/blade-heroicons/workflows/Tests/badge.svg" alt="Tests">
-</a>
-<a href="https://packagist.org/packages/anodyne/blade-fluentui-icons">
-    <img src="https://img.shields.io/packagist/v/anodyne/blade-fluentui-icons" alt="Latest Stable Version">
-</a>
-<a href="https://packagist.org/packages/anodyne/blade-fluentui-icons">
-    <img src="https://img.shields.io/packagist/dt/anodyne/blade-fluentui-icons" alt="Total Downloads">
-</a>
+<a href="https://github.com/anodyne/blade-fluentui-icons/actions?query=workflow%3ATests"><img src="https://github.com/blade-ui-kit/blade-heroicons/workflows/Tests/badge.svg" alt="Tests"></a>
+<a href="https://packagist.org/packages/anodyne/blade-fluentui-icons"><img src="https://img.shields.io/packagist/v/anodyne/blade-fluentui-icons" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/anodyne/blade-fluentui-icons"><img src="https://img.shields.io/packagist/dt/anodyne/blade-fluentui-icons" alt="Total Downloads"></a>
 
 A package to easily make use of [Fluent UI icons](https://github.com/microsoft/fluentui-system-icons) in your Laravel Blade views.
 
@@ -48,7 +42,7 @@ Icons can be used as self-closing Blade components which will be compiled to SVG
 You can also pass classes to your icon components:
 
 ```blade
-<x-fluentui-o-access-time class="w-6 h-6 text-gray-500"/>
+<x-fluentui-o-access-time class="size-6 text-gray-500"/>
 ```
 
 And even use inline styles:
@@ -77,6 +71,23 @@ Then use them in your views like:
 <img src="{{ asset('vendor/blade-fluentui-icons/f-access-time.svg') }}" width="10" height="10"/>
 <img src="{{ asset('vendor/blade-fluentui-icons/o-access-time.svg') }}" width="10" height="10"/>
 ```
+
+### Enum
+
+Blade FluentUI Icons includes an enum that maps every icon to an enum case. This allows for easily referencing specific icons from PHP. This is also helpful when using FluentUI Icons with a system like [Filament](https://filamentphp.com/) for referencing icons.
+
+Case names use PascalCase for outline icons and a `Filled` suffix for filled icons:
+
+```php
+use Anodyne\FluentUiIcons\FluentUI;
+
+svg(FluentUI::AccessTimeFilled->value);
+svg(FluentUI::AccessTime->value);
+```
+
+Enum values use the default `fluent` prefix.
+
+The enum is available from package version 1.1.339 onward:
 
 ## Changelog
 

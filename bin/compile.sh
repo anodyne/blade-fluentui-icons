@@ -1,21 +1,40 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
-DIRECTORY=$(cd $1 && pwd)
-DIST=$DIRECTORY
-RESOURCES=$DIRECTORY/../../../../resources/svg
+ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+DIRECTORY=$(cd "${1:?Usage: compile.sh <assets-directory>}" && pwd)
+RESOURCES="$ROOT/resources/svg"
+
+if [[ ! -x "$ROOT/node_modules/.bin/svgo" ]]; then
+    echo "SVGO is missing. Run bun install --frozen-lockfile before compiling icons." >&2
+    exit 1
+fi
+
+mkdir -p "$RESOURCES"
+shopt -s nullglob
 
 echo "Compiling icons..."
 
-for file in $DIST/*/SVG/* ;
-do
-    file="${file%/}";
-    prefix="/Users/dvs/Code/personal/blade-fluentui-icons/vendor/microsoft/fluentui-system-icons/assets/"
+for file in "$DIRECTORY"/*/SVG/*; do
+    filename=${file##*/}
 
-    [[ "$file" =~ ^($prefix)(.*)(ic_fluent_)(.+)(_20_regular.svg)$ ]] && sed -e 's/ width="20" height="20"//g;s/#212121/currentColor/g' "$file" > "$RESOURCES/o-$(echo ${BASH_REMATCH[4]//_/-}.svg)"
+    if [[ "$filename" =~ ^ic_fluent_(.+)_20_(regular|filled)\.svg$ ]]; then
+        name=${BASH_REMATCH[1]//_/-}
+        variant=${BASH_REMATCH[2]}
+        prefix=o
+        if [[ "$variant" == filled ]]; then
+            prefix=f
+        fi
 
-    [[ "$file" =~ ^($prefix)(.*)(ic_fluent_)(.+)(_20_filled.svg)$ ]] && sed -e 's/ width="20" height="20"//g;s/#212121/currentColor/g' "$file" > "$RESOURCES/f-$(echo ${BASH_REMATCH[4]//_/-}.svg)"
+        sed -e 's/ width="20" height="20"//g;s/#212121/currentColor/g' "$file" > "$RESOURCES/$prefix-$name.svg"
+    fi
 done
+
+echo "Optimizing icons..."
+bun run --cwd "$ROOT" optimize-icons
+
+echo "Generating icon enum..."
+bun "$ROOT/bin/generate-enum.mjs"
 
 echo "All done!"

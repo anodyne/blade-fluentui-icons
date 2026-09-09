@@ -1,0 +1,12 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "packageManager": "bun@1.3.14",
+    "scripts": {
+        "generate-enum": "bun bin/generate-enum.mjs",
+        "optimize-icons": "svgo --folder resources/svg --recursive --multipass --quiet"
+    },
+    "devDependencies": {
+        "svgo": "^4.1.0"
+    }
+}
