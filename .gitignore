@@ -1,7 +1,7 @@
-node_modules/
-vendor/
-.phpunit.result.cache
-composer.lock
-phpunit.xml
-package-lock.json
+/.idea
+/node_modules
+/vendor
+
+*.cache
+
 .DS_Store
