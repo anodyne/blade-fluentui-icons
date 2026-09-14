@@ -528,6 +528,7 @@ enum FluentUI: string
     case ChannelAddFilled = 'fluent-f-channel-add';
     case ChannelAlertFilled = 'fluent-f-channel-alert';
     case ChannelArrowLeftFilled = 'fluent-f-channel-arrow-left';
+    case ChannelArrowRightFilled = 'fluent-f-channel-arrow-right';
     case ChannelDismissFilled = 'fluent-f-channel-dismiss';
     case ChannelShareFilled = 'fluent-f-channel-share';
     case ChannelSubtractFilled = 'fluent-f-channel-subtract';
@@ -763,6 +764,7 @@ enum FluentUI: string
     case CopySelectFilled = 'fluent-f-copy-select';
     case CouchFilled = 'fluent-f-couch';
     case CounterFilled = 'fluent-f-counter';
+    case CoworkFilled = 'fluent-f-cowork';
     case CreditCardClockFilled = 'fluent-f-credit-card-clock';
     case CreditCardPersonFilled = 'fluent-f-credit-card-person';
     case CreditCardToolboxFilled = 'fluent-f-credit-card-toolbox';
@@ -1151,6 +1153,7 @@ enum FluentUI: string
     case FlipHorizontalFilled = 'fluent-f-flip-horizontal';
     case FlipVerticalFilled = 'fluent-f-flip-vertical';
     case FlowFilled = 'fluent-f-flow';
+    case FlowArrowFilled = 'fluent-f-flow-arrow';
     case FlowDotFilled = 'fluent-f-flow-dot';
     case FlowSparkleFilled = 'fluent-f-flow-sparkle';
     case FlowchartFilled = 'fluent-f-flowchart';
@@ -1280,6 +1283,7 @@ enum FluentUI: string
     case HandLeftFilled = 'fluent-f-hand-left';
     case HandLeftChatFilled = 'fluent-f-hand-left-chat';
     case HandMultipleFilled = 'fluent-f-hand-multiple';
+    case HandMultipleStackFilled = 'fluent-f-hand-multiple-stack';
     case HandOpenHeartFilled = 'fluent-f-hand-open-heart';
     case HandPointFilled = 'fluent-f-hand-point';
     case HandRightFilled = 'fluent-f-hand-right';
@@ -1478,6 +1482,7 @@ enum FluentUI: string
     case LightbulbFilamentFilled = 'fluent-f-lightbulb-filament';
     case LightbulbPersonFilled = 'fluent-f-lightbulb-person';
     case LightbulbPulseFilled = 'fluent-f-lightbulb-pulse';
+    case LightbulbSparkleFilled = 'fluent-f-lightbulb-sparkle';
     case LikertFilled = 'fluent-f-likert';
     case LineFilled = 'fluent-f-line';
     case LineDashesFilled = 'fluent-f-line-dashes';
@@ -1694,10 +1699,12 @@ enum FluentUI: string
     case NumberSymbolFilled = 'fluent-f-number-symbol';
     case NumberSymbolDismissFilled = 'fluent-f-number-symbol-dismiss';
     case NumberSymbolSquareFilled = 'fluent-f-number-symbol-square';
+    case OmegaFilled = 'fluent-f-omega';
     case OpenFilled = 'fluent-f-open';
     case OpenFolderFilled = 'fluent-f-open-folder';
     case OpenOffFilled = 'fluent-f-open-off';
     case OptionsFilled = 'fluent-f-options';
+    case OptionsSpeakerFilled = 'fluent-f-options-speaker';
     case OrganizationFilled = 'fluent-f-organization';
     case OrganizationAddFilled = 'fluent-f-organization-add';
     case OrganizationHorizontalFilled = 'fluent-f-organization-horizontal';
@@ -2168,6 +2175,7 @@ enum FluentUI: string
     case SlashForwardFilled = 'fluent-f-slash-forward';
     case SleepFilled = 'fluent-f-sleep';
     case SlideAddFilled = 'fluent-f-slide-add';
+    case SlideArrowForwardFilled = 'fluent-f-slide-arrow-forward';
     case SlideArrowRightFilled = 'fluent-f-slide-arrow-right';
     case SlideContentFilled = 'fluent-f-slide-content';
     case SlideEraserFilled = 'fluent-f-slide-eraser';
@@ -3386,6 +3394,7 @@ enum FluentUI: string
     case ChannelAdd = 'fluent-o-channel-add';
     case ChannelAlert = 'fluent-o-channel-alert';
     case ChannelArrowLeft = 'fluent-o-channel-arrow-left';
+    case ChannelArrowRight = 'fluent-o-channel-arrow-right';
     case ChannelDismiss = 'fluent-o-channel-dismiss';
     case ChannelShare = 'fluent-o-channel-share';
     case ChannelSubtract = 'fluent-o-channel-subtract';
@@ -3624,6 +3633,7 @@ enum FluentUI: string
     case CopySelect = 'fluent-o-copy-select';
     case Couch = 'fluent-o-couch';
     case Counter = 'fluent-o-counter';
+    case Cowork = 'fluent-o-cowork';
     case CreditCardClock = 'fluent-o-credit-card-clock';
     case CreditCardPerson = 'fluent-o-credit-card-person';
     case CreditCardToolbox = 'fluent-o-credit-card-toolbox';
@@ -4008,6 +4018,7 @@ enum FluentUI: string
     case FlipHorizontal = 'fluent-o-flip-horizontal';
     case FlipVertical = 'fluent-o-flip-vertical';
     case Flow = 'fluent-o-flow';
+    case FlowArrow = 'fluent-o-flow-arrow';
     case FlowDot = 'fluent-o-flow-dot';
     case FlowSparkle = 'fluent-o-flow-sparkle';
     case Flowchart = 'fluent-o-flowchart';
@@ -4137,6 +4148,7 @@ enum FluentUI: string
     case HandLeft = 'fluent-o-hand-left';
     case HandLeftChat = 'fluent-o-hand-left-chat';
     case HandMultiple = 'fluent-o-hand-multiple';
+    case HandMultipleStack = 'fluent-o-hand-multiple-stack';
     case HandOpenHeart = 'fluent-o-hand-open-heart';
     case HandPoint = 'fluent-o-hand-point';
     case HandRight = 'fluent-o-hand-right';
@@ -4298,6 +4310,7 @@ enum FluentUI: string
     case LightbulbFilament = 'fluent-o-lightbulb-filament';
     case LightbulbPerson = 'fluent-o-lightbulb-person';
     case LightbulbPulse = 'fluent-o-lightbulb-pulse';
+    case LightbulbSparkle = 'fluent-o-lightbulb-sparkle';
     case Likert = 'fluent-o-likert';
     case Line = 'fluent-o-line';
     case LineDashes = 'fluent-o-line-dashes';
@@ -4514,10 +4527,12 @@ enum FluentUI: string
     case NumberSymbol = 'fluent-o-number-symbol';
     case NumberSymbolDismiss = 'fluent-o-number-symbol-dismiss';
     case NumberSymbolSquare = 'fluent-o-number-symbol-square';
+    case Omega = 'fluent-o-omega';
     case Open = 'fluent-o-open';
     case OpenFolder = 'fluent-o-open-folder';
     case OpenOff = 'fluent-o-open-off';
     case Options = 'fluent-o-options';
+    case OptionsSpeaker = 'fluent-o-options-speaker';
     case Organization = 'fluent-o-organization';
     case OrganizationAdd = 'fluent-o-organization-add';
     case OrganizationHorizontal = 'fluent-o-organization-horizontal';
@@ -4991,6 +5006,7 @@ enum FluentUI: string
     case SlashForward = 'fluent-o-slash-forward';
     case Sleep = 'fluent-o-sleep';
     case SlideAdd = 'fluent-o-slide-add';
+    case SlideArrowForward = 'fluent-o-slide-arrow-forward';
     case SlideArrowRight = 'fluent-o-slide-arrow-right';
     case SlideContent = 'fluent-o-slide-content';
     case SlideEraser = 'fluent-o-slide-eraser';
